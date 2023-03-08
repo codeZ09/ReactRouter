@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter,Route } from 'react-router-dom';
 import Navbar from './component/Navbar.js';
 import './App.css';
-import Home from './component/Home';
-import About from './component/About';
-import Contact from './component/Contact';
+import Home from './component/Home.js';
+import About from './component/About.js';
+import Contact from './component/Contact.js';
 
 
 const  App = () => {
@@ -15,7 +15,7 @@ const  App = () => {
       <Route path='./' component={Home}/>
       <Route path='./About' component={About}/>
       <Route path='./Contact' component={Contact}/>
-</div>
+    </div>
 </BrowserRouter>
      
   );
