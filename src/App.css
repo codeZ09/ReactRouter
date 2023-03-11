@@ -1,5 +1,6 @@
 .navbar{
   border: 1px solid;
+  border-radius: 20px;
   background: linear-gradient(to right, yellow, red)
 }
 .logContainer{
@@ -23,4 +24,23 @@
 .linkgroup > button{
   margin: 25px;
   padding: 5px;
+}
+
+.mobile {
+  text-decoration: none;
+}
+
+.general{
+  display:flex;
+  justify-content: center;
+}
+
+.homecard{
+  border: 1px solid black;
+  border-radius: 20px;
+  background: linear-gradient(to right, orange , yellow );
+  padding: 1em;
+  margin: 20px;
+  width: 300px;
+  text-align:center;
 }

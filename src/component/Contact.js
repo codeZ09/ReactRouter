@@ -1,11 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Contact = () => {
     return (
-        <div className='container'>
-         <h3 className='header'>Contact</h3>
-         <p>My name is Emmanuel Adofo. I am 20 years of age. Love coding</p>
+        <div>
+        <div className='homecard'>
+         <Link to='/React-Router' className='header'>React-Router</Link>
+         
         </div>
+        <div className='homecard'>
+         <Link to='/React-Life Cycle Methods' className='header'>React-Life Cycle Methods</Link>
+        </div>
+        </div>
+       
     )
 }
 

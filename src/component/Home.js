@@ -2,10 +2,13 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='container'>
+    <div className='general'>
+        <div className='homecard'>
          <h3 className='header'>Home</h3>
-         <p>My name is Emmanuel Adofo. I am 20 years of age. Love coding</p>
+         <p>Hello Welcome to the React Coding BootCamp</p>
         </div>
+    </div>
+        
     )
 }
 

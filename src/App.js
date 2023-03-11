@@ -5,6 +5,8 @@ import './App.css';
 import Home from './component/Home.js';
 import About from './component/About.js';
 import Contact from './component/Contact.js';
+import Card from './component/Card.js';
+
 
 
 const  App = () => {
@@ -15,7 +17,8 @@ const  App = () => {
       <Route path='/' element={<Home />} />
       <Route path='/About' element={<About />}/>
       <Route path='/Contact' element={<Contact />}/>
-      </Routes>
+      <Route path='/:user' element={<Card />}/>
+      </Routes>    
     </div>
      
   );
