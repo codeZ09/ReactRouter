@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 const Card = () => {
 
-    const {user}: { user: string } = useParams();
+    const {user}  = useParams();
     
 
     return (

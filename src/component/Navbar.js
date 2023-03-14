@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link  } from 'react-router-dom'; //useNavigate 
+import { Link } from 'react-router-dom'; //useNavigate 
 
 
 
@@ -20,9 +20,9 @@ const Navbar = () => {
             <h3>ROUTER</h3>
             </div>
             <div className='linkgroup'>
-               <button ><Link className='mobile' to='/'>Home</Link></button> 
+               <button  ><Link className='mobile' to='/'>Home</Link></button> 
                {/* onClick = {redirect} */}
-               <button ><Link className='mobile' to='/About'>About</Link></button> 
+               <button  ><Link className='mobile' to='/About'>About</Link></button> 
                <button ><Link className='mobile' to='/Contact'>Contact</Link></button> 
             </div>
         </nav>

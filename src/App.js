@@ -6,6 +6,7 @@ import Home from './component/Home.js';
 import About from './component/About.js';
 import Contact from './component/Contact.js';
 import Card from './component/Card.js';
+import NotFound from './component/NotFound.js';
 
 
 
@@ -18,6 +19,7 @@ const  App = () => {
       <Route path='/About' element={<About />}/>
       <Route path='/Contact' element={<Contact />}/>
       <Route path='/:user' element={<Card />}/>
+      <Route path="*" element={<NotFound />}/>
       </Routes>    
     </div>
      
