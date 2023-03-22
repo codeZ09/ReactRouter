@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 
-const Card = () => {
+const Card = ({closeCard}) => {
 
     const {user}  = useParams();
 
@@ -12,7 +12,7 @@ const Card = () => {
         <div className='homecard'>
             <h3 className='header'>{user}</h3>
             <p>Welcome</p>
-            <div className='close'><NavLink>Close</NavLink></div>  
+            <div className='close'><NavLink onClick={() => closeCard(false)}>Close</NavLink></div>  
         </div>
     </div>
         

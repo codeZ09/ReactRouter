@@ -19,6 +19,7 @@ import Modal from './component/Modal.js';
 
 const  App = () => {
   const [openModal, setOpenModal] = useState(false)
+  const [close, setclose] = useState(true)
  
   return (
 <div className="App">
@@ -36,8 +37,8 @@ const  App = () => {
         <Route path='AboutCode' element={<AboutCode />} />
       </Route>
 
-      <Route path='/Contact' element={<Contact />}/>
-      <Route path='/:user' element={<Card  />}/>
+      <Route path='/Contact' element={close && <Contact openCard={setclose} appear={setclose} />}/>
+      <Route path='/:user' element={ close && <Card closeCard={setclose} />}/>
       {/* These are the normal form of router */}
       {/* <Route path='/Books' element={<BookList />}/>
       <Route path='/Books/:id' element={<Books />}/>
