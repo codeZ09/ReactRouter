@@ -44,3 +44,46 @@
   width: 300px;
   text-align:center;
 }
+
+.text{
+  text-align: center; 
+}
+
+.active{
+  color: blue;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+}
+
+.close{
+  text-align: center;
+}
+.active{
+  text-decoration: none;
+}
+
+.overlay{
+  border: 1px solid black;
+  margin: 300px;
+  border-radius: 6px;
+  width: 200px;
+  height: 90px;
+  background-color: white;
+  z-index: 2;
+}
+
+.modal{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .9;
+  background-color: grey;
+  z-index: 1;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; //useNavigate 
+import { NavLink } from 'react-router-dom'; //useNavigate 
 
 
 
-const Navbar = () => {
+const Navbar = ({modalOpen}) => {
+    
     // The code below is for Programmmatic Redirect
     
     // const navigate = useNavigate();
@@ -20,10 +21,11 @@ const Navbar = () => {
             <h3>ROUTER</h3>
             </div>
             <div className='linkgroup'>
-               <button  ><Link className='mobile' to='/'>Home</Link></button> 
+               <button  ><NavLink className='mobile' to='/'>Home</NavLink></button> 
                {/* onClick = {redirect} */}
-               <button  ><Link className='mobile' to='/About'>About</Link></button> 
-               <button ><Link className='mobile' to='/Contact'>Contact</Link></button> 
+               <button  ><NavLink className='mobile' to='/About'>About</NavLink></button> 
+               <button ><NavLink className='mobile' to='/Contact' onClick={() => modalOpen(true)}>Contact</NavLink></button> 
+               <button><NavLink className='mobile' to='/Books'>Books</NavLink></button>
             </div>
         </nav>
     )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './component/Navbar.js';
 import './App.css';
@@ -7,20 +7,46 @@ import About from './component/About.js';
 import Contact from './component/Contact.js';
 import Card from './component/Card.js';
 import NotFound from './component/NotFound.js';
+import BookList from './component/BookList';
+import Books from './component/Books.js';
+import NewBook from './component/NewBook.js';
+import BookLayout from './component/BookLayout';
+import AboutCode from './component/AboutCode';
+import Modal from './component/Modal.js';
+
 
 
 
 const  App = () => {
+  const [openModal, setOpenModal] = useState(false)
+ 
   return (
 <div className="App">
-      <Navbar/>
+      <Navbar modalOpen={setOpenModal}/>
       <Routes>
+      <Route path='/Books' element={<BookLayout />} >
+        {/* The following is the nested form of Route */}
+        <Route index element={<BookList />}/>
+        <Route path=':id' element={<Books />}/>
+        <Route path='new' element={<NewBook />}/>
+      </Route>
       <Route path='/' element={<Home />} />
-      <Route path='/About' element={<About />}/>
+
+      <Route path='/About' element={<About />} >
+        <Route path='AboutCode' element={<AboutCode />} />
+      </Route>
+
       <Route path='/Contact' element={<Contact />}/>
-      <Route path='/:user' element={<Card />}/>
+      <Route path='/:user' element={<Card  />}/>
+      {/* These are the normal form of router */}
+      {/* <Route path='/Books' element={<BookList />}/>
+      <Route path='/Books/:id' element={<Books />}/>
+      <Route path='/Books/new' element={<NewBook />}/> */}
       <Route path="*" element={<NotFound />}/>
-      </Routes>    
+      </Routes> 
+      {openModal && <Modal closeModal={setOpenModal} />}  
+      
+
     </div>
      
   );
